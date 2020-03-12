@@ -1,0 +1,123 @@
+{
+    "name": "Mosaic",
+    "scopeName": "source.m",
+    "patterns": [
+        {
+            "include": "#control"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#support"
+        },
+        {
+            "include": "#function-calls"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        }
+    ],
+    "repository": {
+        "control": {
+            "name": "keyword.control.mosaic",
+            "match": "\\b(return|yield|restart|redo|loop|next|exit|goto|go|if|fi|then|elsif|else|elsecase|elseswitch|case|docase|recase|when|for|forall|foreach|to|downto|by|do|od|end|while|repeat|until|switch|record|struct|type|class|function|proc|import|importdll)\\b"
+        },
+        "constants": {
+            "name": "constant.language.mosaic",
+            "match": "\\b(global|const|static|not|int|int8|int16|int32|int64|int128|i8|i16|i32|i64|i128|real|real32|real64|r32|r64|word|word8|word16|word32|word64|word128|u1|u2|u4|u8|u16|u32|u64|u128|real|real32|real64|r32|r64|float32|float64|byte|bit|bit2|bit4|char|wchar|ichar|char64|array|auto|var|intm|intp|wordm|wordp|slice|typeof|subrange|void)\\b"
+        },
+        "numbers": {
+            "match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b",
+            "name": "constant.numeric.mosaic"
+        },
+        "keywords": {
+            "name": "keyword.other.mosaic",
+            "match": "\\b(and|or|rem|iand|ior|ixor|min|max|clamp|sqr|sqrt|sign|sin|cos|tan|asin|acos|atan|ln|lg|log|exp|round|floor|ceil|fract|fmod|atan2)\\b"
+        },
+        "support": {
+            "name": "support.function.mosaic",
+            "match": "\\b(print|println|fprint|fprintln|cprint|cprintln|sprint|sfprint|cp|cpl|read|readln|cast)\\b"
+        },
+        "function-calls": {
+            "name": "source.mosaic.functional",
+            "begin": "(\\w+)(\\()",
+            "beginCaptures": {
+                "1": {
+                    "name": "support.function.functional.mosaic"
+                },
+                "2": {
+                    "name": "punctuation.mosaic"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#control"
+                },
+                {
+                    "include": "#constants"
+                },
+                {
+                    "include": "#numbers"
+                },
+                {
+                    "include": "#keywords"
+                },
+                {
+                    "include": "#support"
+                },
+                {
+                    "include": "#strings"
+                },
+                {
+                    "include": "#comments"
+                }
+            ],
+            "end": "\\)",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.mosaic"
+                }
+            }
+        },
+        "strings": {
+            "begin": "\"",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.mosaic"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "#comments"
+                }
+            ],
+            "end": "\"",
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.mosaic"
+                }
+            },
+            "name": "string.quoted.single.mosaic"
+        },
+        "comments": {
+            "begin": "!",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.mosaic"
+                }
+            },
+            "end": "\\n",
+            "name": "comment.line.mosaic"
+        }
+    }
+}

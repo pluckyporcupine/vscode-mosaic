@@ -1,0 +1,46 @@
+{
+    "name": "mosaic-syntax",
+    "displayName": "Mosaic Syntax Highlighting",
+    "description": "Syntax highlighting for the Mosaic programming language.",
+    "publisher": "Plucky Porcupine Game Boutique",
+    "version": "0.1.0",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pluckyporcupine/vscode-mosaic.git"
+    },
+    "homepage": "https://github.com/pluckyporcupine/vscode-mosaic",
+    "engines": {
+        "vscode": "^1.22.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "Mosaic",
+        "syntax",
+        "highlight"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "mosaic",
+                "aliases": [
+                    "Mosaic",
+                    "mosaic"
+                ],
+                "extensions": [
+                    ".m"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mosaic",
+                "scopeName": "source.m",
+                "path": "./syntaxes/mosaic.tmLanguage.json"
+            }
+        ]
+    }
+}
