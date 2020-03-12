@@ -11,3 +11,5 @@ Notable missing features include:
 * Proper automatic closing statements for `if` and `do` blocks.
 
 Despite that, this should at least be a good start. Improvements will be ongoing as I find time.
+
+You can find more info about Mosaic [here](https://github.com/sal55/langs/tree/master/Mosaic) and [here](https://github.com/sal55/langs/blob/master/mfeatures.md).
