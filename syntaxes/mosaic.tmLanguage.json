@@ -30,11 +30,11 @@
     "repository": {
         "control": {
             "name": "keyword.control.mosaic",
-            "match": "\\b(return|yield|restart|redo|loop|next|exit|goto|go|if|fi|then|elsif|else|elsecase|elseswitch|case|docase|recase|when|for|forall|foreach|to|downto|by|do|od|end|while|repeat|until|switch|record|struct|type|class|function|proc|import|importdll|enum)\\b"
+            "match": "\\b(return|yield|restart|redo|loop|next|exit|stop|goto|go|if|fi|then|elsif|else|elsecase|elseswitch|case|docase|recase|when|for|forall|foreach|to|downto|by|do|od|end|endif|endcase|esac|enddocase|endswitch|enddoswitch|endfor|endforall|endproc|endfunction|endwhile|endto|enddo|endunless|endimportdll|endimportlib|endtry|endrecord|endclass|endassem|while|repeat|until|always|switch|doswitch|record|struct|type|class|function|proc|import|importdll|enum|tabledata|eval|asm|assem|try|except|finally|raise|include|strinclude|bininclude|export)\\b"
         },
         "constants": {
             "name": "constant.language.mosaic",
-            "match": "\\b(global|const|static|not|int|int8|int16|int32|int64|int128|i8|i16|i32|i64|i128|real|real32|real64|r32|r64|word|word8|word16|word32|word64|word128|u1|u2|u4|u8|u16|u32|u64|u128|real|real32|real64|r32|r64|float32|float64|byte|bit|bit2|bit4|char|wchar|ichar|char64|array|auto|var|intm|intp|wordm|wordp|slice|typeof|subrange|void|ref|clang)\\b"
+            "match": "\\b(global|const|static|not|int|inot|istrue|int8|int16|int32|int64|int128|i8|i16|i32|i64|i128|real|real32|real64|r32|r64|word|word8|word16|word32|word64|word128|u1|u2|u4|u8|u16|u32|u64|u128|real|real32|real64|r32|r64|float32|float64|byte|bit|bit2|bit4|char|wchar|ichar|char64|array|auto|var|intm|intp|wordm|wordp|slice|typeof|subrange|void|ref|clang|mlang|windows|union|macro|callback|out|as)\\b"
         },
         "numbers": {
             "match": "\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b",
@@ -42,7 +42,7 @@
         },
         "keywords": {
             "name": "keyword.other.mosaic",
-            "match": "\\b(and|or|rem|iand|ior|ixor|min|max|clamp|sqr|sqrt|sign|sin|cos|tan|asin|acos|atan|ln|lg|log|exp|round|floor|ceil|fract|fmod|atan2)\\b"
+            "match": "\\b(and|andb|or|orb|rem|iand|ior|ixor|in|notin|inrev|divrem|min|max|clamp|sqr|sqrt|sign|sin|cos|tan|asin|acos|atan|ln|log|exp|round|floor|ceil|fract|fmod|atan2|pi|nil|prepend|append|concat|sliceptr|len|lwb|upb|bounds|lenstr|bitwidth|bytes|minvalue|maxvalue|typestr|msb|lsb|msbit|lsbit|msw|lsw|odd|even|thousand|million|billion)\\b"
         },
         "support": {
             "name": "support.function.mosaic",
