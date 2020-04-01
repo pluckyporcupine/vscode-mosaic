@@ -96,11 +96,6 @@
                     "name": "punctuation.definition.string.begin.mosaic"
                 }
             },
-            "patterns": [
-                {
-                    "include": "#comments"
-                }
-            ],
             "end": "\"",
             "endCaptures": {
                 "0": {
